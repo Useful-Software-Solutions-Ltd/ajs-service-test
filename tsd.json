@@ -1,0 +1,45 @@
+{
+  "version": "v4",
+  "repo": "borisyankov/DefinitelyTyped",
+  "ref": "master",
+  "path": "typings",
+  "bundle": "typings/tsd.d.ts",
+  "installed": {
+    "angularjs/angular.d.ts": {
+      "commit": "3a6e1b8988eba0ba74fe4db20c950242552857e2"
+    },
+    "jasmine/jasmine.d.ts": {
+      "commit": "3a6e1b8988eba0ba74fe4db20c950242552857e2"
+    },
+    "karma/karma.d.ts": {
+      "commit": "3a6e1b8988eba0ba74fe4db20c950242552857e2"
+    },
+    "log4js/log4js.d.ts": {
+      "commit": "3a6e1b8988eba0ba74fe4db20c950242552857e2"
+    },
+    "serve-static/serve-static.d.ts": {
+      "commit": "3a6e1b8988eba0ba74fe4db20c950242552857e2"
+    },
+    "bluebird/bluebird.d.ts": {
+      "commit": "3a6e1b8988eba0ba74fe4db20c950242552857e2"
+    },
+    "mime/mime.d.ts": {
+      "commit": "3a6e1b8988eba0ba74fe4db20c950242552857e2"
+    },
+    "node/node.d.ts": {
+      "commit": "3a6e1b8988eba0ba74fe4db20c950242552857e2"
+    },
+    "express/express.d.ts": {
+      "commit": "3a6e1b8988eba0ba74fe4db20c950242552857e2"
+    },
+    "sinon/sinon.d.ts": {
+      "commit": "3a6e1b8988eba0ba74fe4db20c950242552857e2"
+    },
+    "jquery/jquery.d.ts": {
+      "commit": "3a6e1b8988eba0ba74fe4db20c950242552857e2"
+    },
+    "angularjs/angular-mocks.d.ts": {
+      "commit": "3a6e1b8988eba0ba74fe4db20c950242552857e2"
+    }
+  }
+}
