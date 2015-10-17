@@ -1,16 +1,16 @@
 'use strict'
 
-describe('testService', function(){
+describe('testService', () => {
 	
 	//invoke the module containing testService1
 	beforeEach(angular.mock.module('app'));
-				
-	describe('greet',function(){
+
+	describe('greet', () => {
 		//use inject to inject the service into the test function
-		it('should return hello + param', inject (function(testService: app.ItestService){
+		it('should return hello + param', inject(function(testService: app.ItestService) : void {
 			var result = testService.greet("Dave");
-			
-			expect(result).toBe("hello Dave");
+
+			expect(result).toBe("Hello Dave");
 		}))
-	});	
+	});
 });

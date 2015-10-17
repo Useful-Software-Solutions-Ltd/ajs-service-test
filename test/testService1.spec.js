@@ -9,26 +9,16 @@ describe('testService1', function () {
             $broadcast: function () { }
         });
         //tell $provide to use the mock not the original $rootScope
-        module(function ($provide) {
+        angular.mock.module(function ($provide) {
             $provide.value('$rootScope', mock$rootScope);
         });
     });
     describe('greet', function () {
         //use inject to inject the service into the test function
-        it('should return hello + param', inject(function (testService1) {
+        it('should raise the greetCalled event when called', inject(function (testService1) {
             testService1.greet("Dave");
-            expect(mock$rootScope.$broadcast.called).toBeTruthy();
+            expect(mock$rootScope.$broadcast.calledWith('greetCalled')).toBeTruthy();
         }));
-        //use an async test calling done once the event has been handled		
-        /*it('should fire greetCalled event', function(done) {
-            inject(function(testService1: app.ItestService1) {
-                testService1.greet("Dave");
-                expect("hello Dave").toBe("hello Dave");
-
-
-
-            });
-        });*/
     });
 });
 //# sourceMappingURL=testService1.spec.js.map

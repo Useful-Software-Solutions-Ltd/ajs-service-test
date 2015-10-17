@@ -6,7 +6,7 @@ describe('testService', function () {
         //use inject to inject the service into the test function
         it('should return hello + param', inject(function (testService) {
             var result = testService.greet("Dave");
-            expect(result).toBe("hello Dave");
+            expect(result).toBe("Hello Dave");
         }));
     });
 });

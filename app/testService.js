@@ -8,7 +8,7 @@ var app;
         };
         return service;
         function greet(name) {
-            return "hello " + name;
+            return "Hello " + name;
         }
     }
     angular.module('app').factory('testService', testService);

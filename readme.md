@@ -1,1 +1,2 @@
-##Unit testing a typescript AngularJS service with Karma
+##TypeScript unit tests for an AngularJS service written in with Karma.
+
