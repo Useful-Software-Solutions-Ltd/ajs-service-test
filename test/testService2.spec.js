@@ -9,10 +9,9 @@ describe('testService2', function () {
         it('should resolve promise with correct greeting', inject(function (testService2, $rootScope) {
             testService2.greet("Dave")
                 .then(function (result) {
-                $rootScope.$digest();
-                //expect(result).toBe("Hello Dave");
-                expect(false).toBe(true);
+                expect(result).toBe("Hello Dave");
             });
+            $rootScope.$digest();
         }));
     });
 });

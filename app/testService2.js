@@ -9,7 +9,7 @@ var app;
         return service;
         function greet(name) {
             return $q(function (resolve, reject) {
-                resolve("Hello" + name);
+                resolve("Hello " + name);
             });
         }
     }

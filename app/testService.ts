@@ -1,7 +1,6 @@
 module app {
     'use strict';
 
-
     export interface ItestService {
         greet(name: string): string;
     }

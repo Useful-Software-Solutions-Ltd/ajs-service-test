@@ -10,13 +10,13 @@ describe('testService2', () => {
 
 	describe('greet', () => {					
 		//test the result of a returned promise		
-		it('should resolve promise with correct greeting', inject(function(testService2: app.ItestService2, $rootScope: ng.IRootScopeService) {
+		it('should resolve promise with correct greeting', inject(function(testService2: app.ItestService2, $rootScope: ng.IRootScopeService) {			
 			testService2.greet("Dave")
 				.then((result) => {
-					$rootScope.$digest();
-					//expect(result).toBe("Hello Dave");
-					expect(false).toBe(true);
+					expect(result).toBe("Hello Dave");										
 				});				
+				
+				$rootScope.$digest();
 		}));
 	});
 });
