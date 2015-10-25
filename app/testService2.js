@@ -9,10 +9,12 @@ var app;
         return service;
         function greet(name) {
             return $q(function (resolve, reject) {
-                resolve("Hello " + name);
+                resolve('Hello ' + name);
             });
         }
     }
-    angular.module('app').factory('testService2', testService2);
+    angular
+        .module('app')
+        .factory('testService2', testService2);
 })(app || (app = {}));
 //# sourceMappingURL=testService2.js.map

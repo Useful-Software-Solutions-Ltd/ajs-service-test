@@ -9,10 +9,12 @@ var app;
         return service;
         function greet(name, callback) {
             setTimeout(function () {
-                callback("Hello " + name);
+                callback('Hello ' + name);
             }, 100);
         }
     }
-    angular.module('app').factory('testService3', testService3);
+    angular
+        .module('app')
+        .factory('testService3', testService3);
 })(app || (app = {}));
 //# sourceMappingURL=testService3.js.map

@@ -16,10 +16,12 @@ module app {
 
         function greet(name: string, callback: (greeting: string) => any): void {
             setTimeout(() => {
-                    callback("Hello " + name);
+                    callback('Hello ' + name);
                 }, 100);
         }
     }
 
-    angular.module('app').factory('testService3', testService3);
+    angular
+        .module('app')
+        .factory('testService3', testService3);
 }

@@ -15,9 +15,11 @@ module app {
         return service;
 
         function greet(name: string): string {
-            return "Hello " + name;
+            return 'Hello ' + name;
         }
     }
 
-    angular.module('app').factory('testService', testService);
+    angular
+        .module('app')
+        .factory('testService', testService);
 }

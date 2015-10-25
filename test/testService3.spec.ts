@@ -1,13 +1,9 @@
 'use strict'
 
 describe('testService3', function(): void {
-	var mock$rootScope;
 	
 	//invoke the module containing testService1
 	beforeEach(angular.mock.module('app'));
-
-	beforeEach(function(): void {
-	});
 
 	describe('greet', function(): void {					
 		//test the result of a returned promise		

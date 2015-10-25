@@ -15,9 +15,11 @@ module app {
         return service;
 
         function greet(name: string): void {
-            $rootScope.$broadcast('greetCalled', { message: "hello" + name });          
+            $rootScope.$broadcast('greetCalled', { message: 'Hello ' + name });          
         }
     }
 
-    angular.module('app').factory('testService1', testService1);
+    angular
+        .module('app')
+        .factory('testService1', testService1);
 }

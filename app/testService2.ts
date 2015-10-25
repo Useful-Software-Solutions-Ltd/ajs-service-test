@@ -16,10 +16,12 @@ module app {
 
         function greet(name: string): ng.IPromise<string> {
             return $q(function(resolve, reject): any {
-                resolve("Hello " + name);
+                resolve('Hello ' + name);
             });
         }
     }
 
-    angular.module('app').factory('testService2', testService2);
+    angular
+        .module('app')
+        .factory('testService2', testService2);
 }

@@ -8,9 +8,11 @@ var app;
         };
         return service;
         function greet(name) {
-            return "Hello " + name;
+            return 'Hello ' + name;
         }
     }
-    angular.module('app').factory('testService', testService);
+    angular
+        .module('app')
+        .factory('testService', testService);
 })(app || (app = {}));
 //# sourceMappingURL=testService.js.map
