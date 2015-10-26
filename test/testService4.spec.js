@@ -1,15 +1,16 @@
 'use strict';
 describe('testService4', function () {
-    var provider;
-    //invoke the module containing testService1
+    //invoke the module containing testService4
     beforeEach(angular.mock.module('app'));
-    beforeEach(function () {
-        angular.mock.module(function (testService4Provider) {
-            provider = testService4Provider;
-        });
-    });
     describe('testService4Provider', function () {
-        beforeEach(inject()); //important module won't be  loaded until inject is called 
+        var provider;
+        //get the provider to use in tests
+        beforeEach(function () {
+            angular.mock.module(function (testService4Provider) {
+                provider = testService4Provider;
+            });
+        });
+        beforeEach(inject()); //important module won't be loaded until inject is called 
         describe('configure', function () {
             it('should extend the default options with those supplied', function () {
                 var options = {
@@ -30,12 +31,14 @@ describe('testService4', function () {
         });
     });
     describe('greet', function () {
+        beforeEach(function () {
+            angular.mock.module(function (testService4Provider) {
+                testService4Provider.configure({
+                    greeting: 'hola'
+                });
+            });
+        });
         it('should use the configured greeting', function () {
-            var options = {
-                greeting: 'hola'
-            };
-            sinon.spy(angular, 'extend');
-            provider.configure(options);
             inject(function (testService4) {
                 var result = testService4.greet("Dave");
                 expect(result).toBe("hola Dave");

@@ -1,19 +1,21 @@
 'use strict'
 
-describe('testService4', function(): void {
-	var provider: app.ItestService4Provider;
+describe('testService4', function(): void {	
 	
-	//invoke the module containing testService1
+	//invoke the module containing testService4
 	beforeEach(angular.mock.module('app'));
 
-	beforeEach(() => {
-		angular.mock.module(function(testService4Provider: app.ItestService4Provider): void {
-			provider = testService4Provider;
-		});
-	});
-
 	describe('testService4Provider', function(): void {
-		beforeEach(inject()); //important module won't be  loaded until inject is called 
+		var provider: app.ItestService4Provider;
+		
+		//get the provider to use in tests
+		beforeEach(() => {
+			angular.mock.module(function(testService4Provider: app.ItestService4Provider): void {
+				provider = testService4Provider;
+			});
+		});
+		
+		beforeEach(inject()); //important module won't be loaded until inject is called 
 		
 		describe('configure', function(): void {
 			it('should extend the default options with those supplied', function() {
@@ -41,16 +43,15 @@ describe('testService4', function(): void {
 	});
 
 	describe('greet', function(): void {
+		beforeEach(() => {
+			angular.mock.module(function(testService4Provider: app.ItestService4Provider): void {
+				testService4Provider.configure({
+					greeting: 'hola'
+				});
+			});
+		});
 
 		it('should use the configured greeting', function() {
-			var options = {
-				greeting: 'hola'
-			};
-
-			sinon.spy(angular, 'extend');
-
-			provider.configure(options);
-
 			inject(function(testService4: app.ItestService4) {
 
 				var result = testService4.greet("Dave");

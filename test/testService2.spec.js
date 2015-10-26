@@ -1,6 +1,6 @@
 'use strict';
 describe('testService2', function () {
-    //invoke the module containing testService1
+    //invoke the module containing testService2
     beforeEach(angular.mock.module('app'));
     beforeEach(function () {
     });

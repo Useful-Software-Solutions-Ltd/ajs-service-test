@@ -2,7 +2,7 @@
 
 describe('testService3', function(): void {
 	
-	//invoke the module containing testService1
+	//invoke the module containing testService3
 	beforeEach(angular.mock.module('app'));
 
 	describe('greet', function(): void {					

@@ -2,24 +2,23 @@ var app;
 (function (app) {
     'use strict';
     var testService4Provider = (function () {
-  
-            var options = {
+        function testService4Provider() {
+            this.options = {
                 greeting: 'hello'
             };
-       
+        }
         testService4Provider.prototype.configure = function (options) {
             angular.extend(this.options, options);
         };
         testService4Provider.prototype.$get = function () {
+            var _this = this;
             var service = {
-                greet: greet
+                greet: function (name) {
+                    return _this.options.greeting + ' ' + name;
+                }
             };
             return service;
-            function greet(name) {
-                return this.options + ' ' + name;
-            }
         };
-        ;
         return testService4Provider;
     })();
     angular

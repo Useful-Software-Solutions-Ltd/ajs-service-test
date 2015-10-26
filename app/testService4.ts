@@ -14,7 +14,7 @@ module app {
     }
 
     class testService4Provider implements ItestService4Provider {
-       options: ItestService4Options = {
+        options: ItestService4Options = {
             greeting: 'hello'
         }
 
@@ -24,15 +24,13 @@ module app {
 
         $get(): ItestService4 {
             var service: ItestService4 = {
-                greet: greet
+                greet: (name: string) => {
+                    return this.options.greeting + ' ' + name;
+                }
             };
 
             return service;
-
-            function greet(name: string): string {
-                return this.options + ' ' + name;
-            }
-        };
+        }
     }
 
     angular
