@@ -30,7 +30,7 @@ describe('testService4', function () {
             });
         });
     });
-    describe('greet', function () {
+    describe('testService4', function () {
         beforeEach(function () {
             angular.mock.module(function (testService4Provider) {
                 testService4Provider.configure({
@@ -38,10 +38,12 @@ describe('testService4', function () {
                 });
             });
         });
-        it('should use the configured greeting', function () {
-            inject(function (testService4) {
-                var result = testService4.greet("Dave");
-                expect(result).toBe("hola Dave");
+        describe('greet', function () {
+            it('should use the configured greeting', function () {
+                inject(function (testService4) {
+                    var result = testService4.greet("Dave");
+                    expect(result).toBe("hola Dave");
+                });
             });
         });
     });

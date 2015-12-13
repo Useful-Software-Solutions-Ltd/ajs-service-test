@@ -14,7 +14,7 @@ describe('testService4', function(): void {
 				provider = testService4Provider;
 			});
 		});
-		
+
 		beforeEach(inject()); //important module won't be loaded until inject is called 
 		
 		describe('configure', function(): void {
@@ -42,7 +42,7 @@ describe('testService4', function(): void {
 		});
 	});
 
-	describe('greet', function(): void {
+	describe('testService4', function(): void {
 		beforeEach(() => {
 			angular.mock.module(function(testService4Provider: app.ItestService4Provider): void {
 				testService4Provider.configure({
@@ -50,13 +50,15 @@ describe('testService4', function(): void {
 				});
 			});
 		});
+		
+		describe('greet', function(): void {
+			it('should use the configured greeting', function() {
+				inject(function(testService4: app.ItestService4) {
 
-		it('should use the configured greeting', function() {
-			inject(function(testService4: app.ItestService4) {
+					var result = testService4.greet("Dave");
 
-				var result = testService4.greet("Dave");
-
-				expect(result).toBe("hola Dave");
+					expect(result).toBe("hola Dave");
+				});
 			});
 		});
 	});
